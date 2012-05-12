@@ -1,0 +1,3 @@
+[submodule "ci/packaging"]
+	path = ci/packaging
+	url = git://github.com/chregu/packaging.git
