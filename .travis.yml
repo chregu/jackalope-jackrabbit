@@ -11,5 +11,5 @@ before_script:
 
 script: phpunit -c tests/phpunit.xml.dist
 
-notifications:
-  irc: "irc.freenode.org#jackalope"
+#notifications:
+#  irc: "irc.freenode.org#jackalope"
