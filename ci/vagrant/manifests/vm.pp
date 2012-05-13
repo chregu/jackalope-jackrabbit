@@ -30,6 +30,21 @@ class test-server inherits phpunit {
     package {$phppackages:
         ensure => latest,
     }
+      # Thanks to Java strange licensing
+        file {"/var/cache/debconf/sun-java6-bin.preseed":
+          ensure  => present,
+          content => "sun-java6-bin   shared/accepted-sun-dlj-v1-1    boolean true",
+        }
+
+        package { "sun-java6-bin":
+          ensure => present,
+          responsefile => "/var/cache/debconf/sun-java6-bin.preseed",
+          require => File["/var/cache/debconf/sun-java6-bin.preseed"],
+          before => Package["sun-java6-jdk"],
+        }
+
+
+    package {"sun-java6-jdk": ensure => latest}
 
     package { "php5-suhosin": ensure => purged,}
 
