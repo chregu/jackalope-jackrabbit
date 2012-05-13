@@ -2,8 +2,8 @@ $configure = array(
     'packagename' => 'jackalope-jackrabbit',
     'version' => '0.9',
     'maintainer' => 'me myself <me@myself.com>',
-    'description' => '',
-    'url' => '',
+    'description' => 'Mainly a test',
+    'url' => ' ',
     'packagetype' => 'deb',
     'depends' => array(
     /*    'apache2',
