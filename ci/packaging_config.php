@@ -1,6 +1,6 @@
 $configure = array(
     'packagename' => 'jackalope-jackrabbit',
-    'version' => '1.0',
+    'version' => '0.9',
     'maintainer' => 'me myself <me@myself.com>',
     'description' => '',
     'url' => '',
