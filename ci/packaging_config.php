@@ -37,5 +37,6 @@ $filemapping = array(
     'var/www/@PACKAGENAME@' => array(
         '*',
         '- templates',
+        '- ci/build'
     ),
 );
