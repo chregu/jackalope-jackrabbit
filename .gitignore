@@ -24,3 +24,5 @@ composer.phar
 composer.lock
 Makefile
 ci/build/
+bin/jackrabbit/
+bin/jackrabbit-standalone-*.jar
