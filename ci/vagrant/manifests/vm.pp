@@ -25,7 +25,7 @@ class test-server inherits phpunit {
     }
 
 
-    $phppackages=["php5-cli","php5-common","php5-gd","php5-curl","php-pear"]
+    $phppackages=["php5-cli","php5-common","php5-gd","php5-curl","php-pear","php5-xdebug"]
 
     package {$phppackages:
         ensure => latest,
