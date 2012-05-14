@@ -14,6 +14,7 @@ cd /var/www/jackalope-jackrabbit
 #running tests
 mkdir -p ci/build/test-reports
 phpunit -c tests/phpunit.xml.dist --coverage-clover ci/build/test-reports/clover.xml --log-junit  ci/build/test-reports/phpunit.xml
+rm -rf /vagrant/ci/build/test-reports
 cp -r ci/build/test-reports /vagrant/ci/build/
 id=$(cat $pidfile 2>/dev/null)
 #kill jackrabbit, otherwise the ssh process doesn't return
