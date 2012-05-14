@@ -48,6 +48,12 @@ class test-server inherits phpunit {
 
     package { "php5-suhosin": ensure => purged,}
 
+    exec {"install-jackrabbit":
+        command => "/bin/bash /vagrant/ci/vagrant/scripts/install_jackrabbit.sh",
+        creates => "/var/lib/jackrabbit-standalone/bin/jack",
+        require =>  Package["sun-java6-jdk"],
+
+    }
 }
 
 class phpunit
