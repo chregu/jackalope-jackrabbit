@@ -39,5 +39,7 @@ $filemapping = array(
         '- templates',
         '- ci/build',
         '- test-reports'
+        '- bin/*jar',
+        '- bin/jackrabbt'
     ),
 );
