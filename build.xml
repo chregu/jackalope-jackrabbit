@@ -19,13 +19,13 @@
 
     <target name="phpmd">
         <exec dir="${basedir}" executable="phpmd" failonerror="false">
-            <arg line=". html codesize,design,naming,unusedcode --ignore ci/*,tests/*,build/* --reportfile ${basedir}/build/logs/pmd.html" />
+            <arg line=". html codesize,design,naming,unusedcode --exclude ci/*,tests/*,build/* --reportfile ${basedir}/build/logs/pmd.html" />
         </exec>
     </target>
 
 	<target name="phpmdxml">
         <exec dir="${basedir}" executable="phpmd" failonerror="false">
-            <arg line=". xml codesize,design,naming,unusedcode --ignore ci/*,tests/*,build/* --reportfile ${basedir}/build/logs/pmd.xml" />
+            <arg line=". xml codesize,design,naming,unusedcode --exclude ci/*,tests/*,build/* --reportfile ${basedir}/build/logs/pmd.xml" />
         </exec>
     </target>
 
