@@ -31,7 +31,7 @@
                        ." />
         </exec>
         <exec dir="${basedir}/build/logs" executable="xsltproc" failonerror="false" output="${basedir}/build/cpd/index.html">
-            <arg line="/ci/cpdhtml.xslt ${basedir}/build/logs/pmd-cpd.xml" />
+            <arg line="${basedir}/ci/cpdhtml.xslt ${basedir}/build/logs/pmd-cpd.xml" />
         </exec>
     </target>
 
