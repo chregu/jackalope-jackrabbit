@@ -23,6 +23,12 @@
         </exec>
     </target>
 
+	<target name="phpmdxml">
+        <exec dir="${basedir}" executable="phpmd" failonerror="false">
+            <arg line=". xml codesize,design,naming,unusedcode --ignore ci/*,tests/*,build/* --reportfile ${basedir}/build/logs/pmd.xml" />
+        </exec>
+    </target>
+
     <target name="phpcpd">
         <exec dir="${basedir}" executable="phpcpd" failonerror="false">
             <arg line="--log-pmd ${basedir}/build/logs/pmd-cpd.xml
@@ -74,6 +80,7 @@
         <parallel>
             <antcall target="phpcs" />
             <antcall target="phpmd" />
+            <antcall target="phpmdxml" />
             <antcall target="phpcpd" />
             <antcall target="pdepend" />
         </parallel>
