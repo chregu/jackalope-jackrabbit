@@ -8,7 +8,7 @@ cd /var/www/jackalope-jackrabbit
 
 #running tests
 mkdir -p ci/build/test-reports
-phpunit -c tests/phpunit.xml.dist --coverage-clover ci/build/test-reports/clover.xml --log-junit  ci/build/test-reports/phpunit.xml
+phpunit -c tests/phpunit.xml.dist --coverage-html ci/build/test-reports/html --coverage-clover ci/build/test-reports/clover.xml --log-junit  ci/build/test-reports/phpunit.xml
 rm -rf /vagrant/ci/build/test-reports
 cp -r ci/build/test-reports /vagrant/ci/build/
 
