@@ -55,7 +55,7 @@
         </exec>
     </target>
 
-   <!--
+
    <target name="phpunit">
         <exec dir="${basedir}/tests" executable="phpunit" failonerror="true">
             <arg line="--log-junit ${basedir}/build/logs/phpunit.xml
@@ -63,14 +63,12 @@
                        --coverage-html ${basedir}/build/coverage" />
         </exec>
     </target>
--->
-    <!--
+
 	<target name="documentation" depends="prepare">
         <exec dir="${basedir}" executable="docblox" failonerror="false">
             <arg line="run -t ${basedir}/build/docblox" />
         </exec>
     </target>
--->
     <target name="parallel">
         <parallel>
             <antcall target="phpcs" />
